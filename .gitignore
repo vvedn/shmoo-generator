@@ -6,9 +6,5 @@ dist/
 build/
 .venv/
 venv/
-outputs/*.csv
-outputs/*.md
-outputs/*.png
-!outputs/.gitkeep
 .ruff_cache/
 .pytest_cache/
