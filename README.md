@@ -5,6 +5,14 @@ Automatic generation of shmoo plots from hardware sweep reports, with full CI/CD
 <!-- CI Badge: replace YOUR_USERNAME/autoshmoo-ci with your actual GitHub path -->
 ![CI](https://github.com/vvedn/shmoo-generator/actions/workflows/ci.yml/badge.svg)
 
+## Example Output
+
+These plots are regenerated automatically by CI on every merge to main.
+
+![Shmoo Plot - siggen_random](outputs/shmoo_siggen_random.png)
+
+![Shmoo Plot - siggen_zero](outputs/shmoo_siggen_zero.png)
+
 ## What It Does
 
 AutoShmoo reads `.rpt` files from hardware sweep tools, extracts voltage/frequency/pass-fail data, and generates:
@@ -41,12 +49,11 @@ pytest
 ```
 autoshmoo-ci/
 ├── autoshmoo/          # Main Python package
-│   ├── parser.py       # Parse .rpt files into records
-│   ├── matcher.py      # Group records by signal generator
+│   ├── parser.py       # Parse .rpt files and group by signal generator
 │   ├── plots.py        # Generate shmoo and power plots
 ├── examples/           # Sample report data for demos
 ├── tests/              # Unit tests (pytest)
-├── outputs/            # Generated artifacts (gitignored except .gitkeep)
+├── outputs/            # Generated artifacts (committed by CI)
 └── .github/workflows/  # CI pipeline
 ```
 
