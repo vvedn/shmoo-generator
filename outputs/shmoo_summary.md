@@ -1,0 +1,10 @@
+| source_file       | siggen        |   voltage |   frequency | result   |   total_power |
+|:------------------|:--------------|----------:|------------:|:---------|--------------:|
+| siggen_random.rpt | siggen_random |       0.8 |         100 | PASS     |          17.3 |
+| siggen_random.rpt | siggen_random |       0.9 |         200 | PASS     |          21.5 |
+| siggen_random.rpt | siggen_random |       0.7 |         300 | FAIL     |          26   |
+| siggen_random.rpt | siggen_random |       1   |         300 | PASS     |          31.6 |
+| siggen_zero.rpt   | siggen_zero   |       0.8 |         100 | PASS     |          13.5 |
+| siggen_zero.rpt   | siggen_zero   |       0.8 |         200 | FAIL     |          16.9 |
+| siggen_zero.rpt   | siggen_zero   |       1   |         200 | PASS     |          19.3 |
+| siggen_zero.rpt   | siggen_zero   |       0.7 |         100 | FAIL     |          12.1 |
