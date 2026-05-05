@@ -1,0 +1,39 @@
+Design: int_mac
+Signal Generator: siggen_random
+Voltage: 0.80 V
+Frequency: 100 MHz
+Result: PASS
+Internal Power: 10.1 mW
+Switching Power: 6.5 mW
+Leakage Power: 0.7 mW
+Total Power: 17.3 mW
+
+Design: int_mac
+Signal Generator: siggen_random
+Voltage: 0.90 V
+Frequency: 200 MHz
+Result: PASS
+Internal Power: 12.4 mW
+Switching Power: 8.2 mW
+Leakage Power: 0.9 mW
+Total Power: 21.5 mW
+
+Design: int_mac
+Signal Generator: siggen_random
+Voltage: 0.70 V
+Frequency: 300 MHz
+Result: FAIL
+Internal Power: 14.8 mW
+Switching Power: 10.1 mW
+Leakage Power: 1.1 mW
+Total Power: 26.0 mW
+
+Design: int_mac
+Signal Generator: siggen_random
+Voltage: 1.00 V
+Frequency: 300 MHz
+Result: PASS
+Internal Power: 18.2 mW
+Switching Power: 12.0 mW
+Leakage Power: 1.4 mW
+Total Power: 31.6 mW
