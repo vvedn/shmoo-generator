@@ -2,7 +2,7 @@
 
 import pytest
 
-from autoshmoo.parser import parse_report, parse_all_reports
+from autoshmoo.parser import parse_report, parse_all_reports, group_by_siggen
 
 
 @pytest.fixture
@@ -110,3 +110,30 @@ def test_parse_all_reports(tmp_path):
     # Only .rpt files are parsed
     siggens = {r["siggen"] for r in records}
     assert siggens == {"sg1", "sg2"}
+
+
+def test_group_by_siggen_basic():
+    """Test grouping records by signal generator name."""
+    records = [
+        {"siggen": "siggen_random", "voltage": 0.9, "frequency": 200},
+        {"siggen": "siggen_zero", "voltage": 0.8, "frequency": 100},
+        {"siggen": "siggen_random", "voltage": 0.7, "frequency": 300},
+    ]
+    groups = group_by_siggen(records)
+
+    assert len(groups) == 2
+    assert len(groups["siggen_random"]) == 2
+    assert len(groups["siggen_zero"]) == 1
+
+
+def test_group_by_siggen_missing_key():
+    """Test that records without a siggen field are grouped under 'unknown'."""
+    records = [
+        {"voltage": 1.0, "frequency": 100},
+        {"siggen": "siggen_random", "voltage": 0.9, "frequency": 200},
+    ]
+    groups = group_by_siggen(records)
+
+    assert "unknown" in groups
+    assert len(groups["unknown"]) == 1
+    assert len(groups["siggen_random"]) == 1
