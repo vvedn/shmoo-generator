@@ -1,0 +1,59 @@
+Design: siggen_adder
+Signal Generator: siggen_adder
+Voltage: 0.70 V
+Frequency: 100 MHz
+Result: PASS
+Internal Power: 5.1 mW
+Switching Power: 3.2 mW
+Leakage Power: 0.3 mW
+Total Power: 8.6 mW
+
+Design: siggen_adder
+Signal Generator: siggen_adder
+Voltage: 0.70 V
+Frequency: 200 MHz
+Result: FAIL
+Internal Power: 7.8 mW
+Switching Power: 5.1 mW
+Leakage Power: 0.4 mW
+Total Power: 13.3 mW
+
+Design: siggen_adder
+Signal Generator: siggen_adder
+Voltage: 0.80 V
+Frequency: 200 MHz
+Result: PASS
+Internal Power: 9.0 mW
+Switching Power: 6.0 mW
+Leakage Power: 0.5 mW
+Total Power: 15.5 mW
+
+Design: siggen_adder
+Signal Generator: siggen_adder
+Voltage: 0.80 V
+Frequency: 300 MHz
+Result: FAIL
+Internal Power: 11.5 mW
+Switching Power: 7.8 mW
+Leakage Power: 0.7 mW
+Total Power: 20.0 mW
+
+Design: siggen_adder
+Signal Generator: siggen_adder
+Voltage: 0.90 V
+Frequency: 300 MHz
+Result: PASS
+Internal Power: 13.2 mW
+Switching Power: 9.1 mW
+Leakage Power: 0.8 mW
+Total Power: 23.1 mW
+
+Design: siggen_adder
+Signal Generator: siggen_adder
+Voltage: 1.00 V
+Frequency: 300 MHz
+Result: PASS
+Internal Power: 15.0 mW
+Switching Power: 10.5 mW
+Leakage Power: 1.0 mW
+Total Power: 26.5 mW
