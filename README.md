@@ -21,7 +21,7 @@ AutoShmoo reads `.rpt` files from hardware sweep tools, extracts voltage/frequen
 - Shmoo plots (pass/fail by voltage vs. frequency)
 - Power summary charts
 
-Everything runs automatically in GitHub Actions on every push.
+Everything runs automatically in GitHub Actions when a branch is merged into main.
 
 ## Quick Start
 
@@ -51,7 +51,7 @@ autoshmoo-ci/
 ├── autoshmoo/          # Main Python package
 │   ├── parser.py       # Parse .rpt files and group by signal generator
 │   ├── plots.py        # Generate shmoo and power plots
-├── examples/           # Sample report data for demos
+├── examples/           # Verilog source and sweep reports
 ├── tests/              # Unit tests (pytest)
 ├── outputs/            # Generated artifacts (committed by CI)
 └── .github/workflows/  # CI pipeline
@@ -59,30 +59,31 @@ autoshmoo-ci/
 
 ## Branching & PR Strategy
 
-
-1. **`main`** branch is always stable and CI-passing.
-2. **Feature branches** (e.g., `feat/siggen-random-results`) are created for each signal generator's code and sweep results.
+1. **`main`** branch is always stable and CI-passing. Never commit directly to main.
+2. **Feature branches** are created for each signal generator's verilog source and sweep reports.
 3. When a feature branch is merged into `main` via pull request, the CI pipeline:
    - Runs linting and tests
    - Parses all report files
    - Generates shmoo plots
-   - Uploads artifacts
+   - Commits the generated outputs back to the repo
 
 **Example workflow:**
 
 ```bash
-# Create a branch for new siggen results
-git checkout -b feat/siggen-random-results
+# Create a branch for a new signal generator
+git checkout -b feat/siggen-sawtooth
 
-# Add report files and any parser updates
-git add examples/sample_project/reports/siggen_random.rpt
-git commit -m "feat(data): add siggen_random sweep results"
+# Add verilog source and sweep reports
+git add examples/sample_project/verilog/siggen_sawtooth.v
+git add examples/sample_project/reports/siggen_sawtooth.rpt
+git commit -m "feat(data): add siggen_sawtooth design and sweep results"
 
 # Push and open a PR
-git push -u origin feat/siggen-random-results
-# Open PR on GitHub -> merge -> CI generates plots
+git push -u origin feat/siggen-sawtooth
+
+# Open PR on GitHub -> review -> merge
+# CI runs automatically and commits the updated shmoo plots to main
 ```
-`
 
 ## Requirements
 
