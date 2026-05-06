@@ -7,7 +7,8 @@
 | siggen_adder.rpt      | siggen_adder      |       0.9 |         300 | PASS     |          23.1 |
 | siggen_adder.rpt      | siggen_adder      |       1   |         300 | PASS     |          26.5 |
 | siggen_multiplier.rpt | siggen_multiplier |       0.8 |         100 | PASS     |          19.9 |
-| siggen_multiplier.rpt | siggen_multiplier |       0.8 |         200 | PASS     |          26   |
+| siggen_multiplier.rpt | siggen_multiplier |       0.8 |         200 | PASS     |          25.8 |
+| siggen_multiplier.rpt | siggen_multiplier |       0.9 |         100 | PASS     |          24.3 |
 | siggen_random.rpt     | siggen_random     |       0.8 |         100 | PASS     |          17.3 |
 | siggen_random.rpt     | siggen_random     |       0.9 |         200 | PASS     |          21.5 |
 | siggen_random.rpt     | siggen_random     |       0.7 |         300 | FAIL     |          26   |
