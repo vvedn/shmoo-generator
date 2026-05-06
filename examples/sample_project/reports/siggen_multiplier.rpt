@@ -16,4 +16,14 @@ Result: PASS
 Internal Power: 15.0 mW
 Switching Power: 10.2 mW
 Leakage Power: 0.8 mW
-Total Power: 26.0 mW
+Total Power: 25.8 mW
+
+Design: siggen_multiplier
+Signal Generator: siggen_multiplier
+Voltage: 0.90 V
+Frequency: 100 MHz
+Result: PASS
+Internal Power: 14.0 mW
+Switching Power: 9.5 mW
+Leakage Power: 0.8 mW
+Total Power: 24.3 mW
